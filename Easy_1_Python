@@ -1,0 +1,15 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return(i, j)  
+
+'''
+1. Nested for loops iterate over all possible combinations of pairs of numbers from the nums list.
+2. The outer loop iterates over the elements of the nums list from the beginning to the end.
+3. The inner loop iterates over the elements of the nums list starting from the element following the current element of the outer loop (thus avoiding duplicate combinations).
+4. For each combination of a pair of numbers, it checks whether their sum equals the target value target.
+5. If the sum equals target, it returns the indices of these two numbers in the form of a tuple (i, j).
+6. If there is no match, it moves on to the next combination.
+'''
